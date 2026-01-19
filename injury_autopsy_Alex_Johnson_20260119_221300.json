@@ -1,0 +1,23 @@
+{
+  "athlete": "Alex Johnson",
+  "sport": "Basketball",
+  "injury": {
+    "type": "Hamstring Strain",
+    "severity": "Grade 2",
+    "date": "2025-12-30"
+  },
+  "analysis_date": "2026-01-19 22:13:00",
+  "early_warnings_count": 2,
+  "key_risk_factors": [
+    "High acute:chronic workload ratio",
+    "Poor recovery score trends",
+    "Inadequate sleep duration",
+    "Previous injury history"
+  ],
+  "prevention_focus_areas": [
+    "Load management optimization",
+    "Sleep and recovery enhancement",
+    "Biomechanical screening",
+    "Stress monitoring"
+  ]
+}
