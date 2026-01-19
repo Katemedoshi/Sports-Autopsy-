@@ -1,181 +1,320 @@
-Sports Autopsy 🏥📊
-Overview
-Sports Autopsy is an interactive digital forensic analysis system for athletic injuries that combines multidisciplinary expertise with local AI analysis using Ollama. This tool provides comprehensive injury assessment, identifies contributing factors, and generates personalized prevention plans.
+**🏥📊 Sports Autopsy
+A Local AI–Powered Digital Forensic System for Athletic Injury Analysis
 
-Features
+Sports Autopsy is an interactive, multidisciplinary injury forensics platform designed to analyze athletic injuries through a data-driven and prevention-first lens. It combines structured sports science logic with local LLM analysis via Ollama, ensuring privacy, explainability, and actionable insight.
+
+This tool does not merely describe injuries. It investigates why they happened, what could have prevented them, and how to reduce recurrence risk.
+
+🔍 What Problem Does This Solve?
+
+Sports injuries are rarely caused by a single factor. Traditional analysis often isolates biomechanics or rehab in silos.
+
+Sports Autopsy unifies multiple expert perspectives into a single forensic workflow, producing:
+
+Root cause analysis
+
+Counterfactual prevention scenarios
+
+Personalized, timeline-based rehabilitation strategies
+
+All while running fully offline.
+
+✨ Key Features
 🎯 Core Capabilities
-Interactive Data Collection: Guided input for athlete profiles, injury details, and training history
 
-Multidisciplinary Analysis: Four expert perspectives on every injury
+Interactive Data Collection
+Guided inputs for athlete profile, injury details, training load, recovery, and performance metrics.
 
-Counterfactual Scenarios: "What-if" analysis for injury prevention
+Multidisciplinary Injury Analysis
+Every injury is examined through four expert lenses.
 
-Personalized Prevention Plans: Actionable, timeline-based rehabilitation strategies
+Counterfactual Reasoning
+“What-if” scenarios to identify preventable injury pathways.
 
-Local AI Integration: Privacy-focused analysis using Ollama LLMs
+Personalized Prevention & Rehab Plans
+Structured, time-based recommendations.
 
-Comprehensive Reporting: Detailed text reports with all analyses and recommendations
+Local AI Integration (Ollama)
+Privacy-first LLM reasoning with zero cloud dependency.
 
-🔬 Analysis Perspectives
-Sports Biomechanist: Movement pattern and technical breakdown analysis
+Comprehensive Reporting
+Automatically generated forensic reports in readable text format.
 
-Sports Physiotherapist: Tissue loading and recovery deficit assessment
+🔬 Multidisciplinary Analysis Perspectives
 
-Strength & Conditioning Coach: Training programming and physical preparation evaluation
+Each injury is independently evaluated by:
 
-Sports Psychologist: Psychological and behavioral factor analysis
+Sports Biomechanist
 
-Installation
+Movement inefficiencies
+
+Technical execution breakdown
+
+Load distribution and kinetic chain issues
+
+Sports Physiotherapist
+
+Tissue stress and recovery deficits
+
+Load tolerance mismatches
+
+Reinjury risk indicators
+
+Strength & Conditioning Coach
+
+Training volume and intensity errors
+
+Strength asymmetries
+
+Conditioning gaps
+
+Sports Psychologist
+
+Stress, burnout, and behavioral contributors
+
+Risk-taking and fatigue decision patterns
+
+Mental recovery considerations
+
+⚙️ Installation
 Prerequisites
-Python 3.8 or higher
 
-Pip package manager
+Python 3.8+
 
-Step 1: Clone/Download
-bash
+pip package manager
+
+Step 1: Clone the Repository
 git clone <repository-url>
 cd sports-autopsy
+
 Step 2: Install Python Dependencies
-bash
 pip install pandas numpy scikit-learn requests
+
 Step 3: Install Ollama (Optional but Recommended)
-bash
-# Visit https://ollama.com/ for installation instructions
-# Or use the automatic check in the script
+
+Visit: https://ollama.com
+
+Or rely on the built-in detection fallback
+
 Step 4: Download an Ollama Model
-bash
 ollama pull mistral
 # or
 ollama pull llama3.2
-Usage
-Basic Usage
-bash
+
+▶️ Usage
+Basic Execution
 python injury_autopsy.py
-Interactive Mode
-The system will guide you through:
 
-Athlete Information: Name, age, sport, position, experience
+Interactive Mode Workflow
 
-Injury Details: Type, severity, mechanism, date
+The system will guide the user through:
 
-Training Context: Load, recovery, sleep, nutrition
+Athlete Profile
+Name, age, sport, position, experience
 
-Medical History: Previous injuries, surgeries
+Injury Details
+Injury type, severity, mechanism, date
 
-Performance Metrics: Trends, fatigue, pain levels
+Training Context
+Training load, recovery, sleep, nutrition
 
-Without Ollama
-The system works in "template mode" without Ollama, providing structured but generic responses. For AI-powered analysis, install Ollama first.
+Medical History
+Prior injuries and surgeries
 
-Output
-Console Display: All analyses shown in terminal
+Performance Metrics
+Fatigue trends, pain levels, workload changes
 
-Text Report: Comprehensive report saved as injury_report_[name]_[timestamp].txt
+Running Without Ollama
 
-System Architecture
-Components
-OllamaClient: Manages local LLM interactions
+If Ollama is not installed:
 
-InteractiveInjuryAutopsy: Main analysis workflow controller
+The system runs in Template Mode
 
-AthleteMetrics: Data structure for athlete metrics
+Outputs structured but non-AI-generated analysis
 
-Analysis Modules: Biomechanical, physiotherapy, S&C, psychological
+For full forensic reasoning, Ollama is recommended.
+
+📄 Output
+
+Console Output
+Live display of all expert analyses
+
+Saved Report
+A detailed text report:
+
+injury_report_<athlete_name>_<timestamp>.txt
+
+🧠 System Architecture
+Core Components
+
+OllamaClient
+Handles all local LLM interactions
+
+InteractiveInjuryAutopsy
+Main workflow orchestrator
+
+AthleteMetrics (Dataclass)
+Centralized athlete data structure
+
+Analysis Modules
+
+Biomechanics
+
+Physiotherapy
+
+Strength & Conditioning
+
+Psychology
 
 Data Flow
-text
-User Input → Data Collection → Multidisciplinary Analysis → 
-Counterfactual Scenarios → Prevention Plan → Final Report
-AI Models Supported
-Recommended Models
-Mistral (Default): Good balance of speed and accuracy
+User Input
+   ↓
+Structured Data Collection
+   ↓
+Multidisciplinary Analysis
+   ↓
+Counterfactual Scenarios
+   ↓
+Prevention & Rehab Plan
+   ↓
+Final Forensic Report
 
-Llama 3.2: Latest Meta model, excellent reasoning
+🤖 Supported AI Models
+Recommended
 
-Orca-mini: Smaller, faster alternative
+Mistral (Default)
+Balanced speed and reasoning
+
+Llama 3.2
+Strong analytical depth
+
+Orca-mini
+Lightweight and fast
 
 Any Ollama-compatible model
 
-Model Selection
-The system automatically detects available models and uses the first one found. You can modify the default in the OllamaClient initialization.
+Model Selection Logic
 
-Example Use Case
-Scenario: Soccer Player Hamstring Strain
-text
+The system automatically:
+
+Detects installed Ollama models
+
+Selects the first available model
+
+Falls back to template mode if none exist
+
+Model behavior can be adjusted in:
+
+OllamaClient.generate()
+
+🧪 Example Use Case
+Scenario: Soccer Player Hamstring Injury
 Athlete: Alex Johnson (24, Midfielder)
 Injury: Grade 2 Hamstring Strain
-Mechanism: Sprinting during match
+Mechanism: High-speed sprint during match
 
-System Provides:
-1. Biomechanical: Reduced hip extension analysis
-2. Physiotherapy: Load management failures
-3. S&C: Strength imbalance recommendations
-4. Psychology: Stress-injury relationship
-5. Prevention: 12-week return-to-play plan
-Customization
-Modifying Analysis Prompts
-Edit the generate_analysis_prompts() method to customize expert perspectives or add new analysis types.
 
-Adding Metrics
-Extend the AthleteMetrics dataclass to include additional tracking metrics relevant to your sport.
+System Output Includes:
 
-Model Parameters
-Adjust temperature, max tokens, and system prompts in the OllamaClient.generate() method.
+Biomechanical analysis of hip extension deficits
 
-Benefits
-For Coaches & Trainers
-Evidence-based injury prevention strategies
+Physiotherapy-based load management failures
 
-Structured rehabilitation protocols
+Strength imbalance recommendations
 
-Multidisciplinary insights in one tool
+Psychological stress and fatigue correlation
 
-For Athletes
-Personalized recovery plans
+A structured 12-week return-to-play plan
 
-Understanding of injury causation
+🔧 Customization
+Modify Expert Prompts
 
-Prevention strategies for future
+Edit:
 
-For Sports Organizations
-Consistent injury documentation
+generate_analysis_prompts()
+
+
+to:
+
+Add new expert roles
+
+Change analytical depth
+
+Introduce sport-specific logic
+
+Extend Athlete Metrics
+
+Enhance:
+
+AthleteMetrics
+
+
+to include:
+
+GPS workload data
+
+RPE scores
+
+Injury recurrence flags
+
+🎯 Who Is This For?
+Coaches & Trainers
+
+Evidence-based prevention strategies
+
+Unified injury analysis framework
+
+Athletes
+
+Clear understanding of injury causation
+
+Personalized recovery guidance
+
+Sports Organizations
+
+Standardized injury documentation
 
 Data-driven prevention programs
 
-Reduced injury recurrence rates
+Reduced reinjury risk
 
-Limitations & Considerations
-Current Limitations
-Requires manual data input (no sensor integration)
+⚠️ Limitations
 
-Generic without sport-specific customization
+Manual data entry only (no sensors yet)
 
-Dependent on user-provided information accuracy
+Generalized logic without sport-specific templates
 
-Privacy & Security
-Local Processing: All analysis stays on your machine
+Accuracy depends on user input quality
 
-No Cloud Dependencies: Works completely offline with Ollama
+🔐 Privacy & Security
 
-Data Control: You own all athlete data
+100% Local Processing
 
-Future Enhancements
+No Cloud Dependencies
+
+Full Data Ownership
+
+Your data never leaves your machine.
+
+🚀 Future Enhancements
 Planned Features
+
 CSV import for athlete metrics
 
-Integration with wearable data
+Wearable data integration
 
-Sport-specific templates
+Sport-specific analysis templates
 
-Graphical visualization of risk factors
+Risk visualization dashboards
 
 Web interface
 
-Mobile app companion
+Mobile companion app
 
 Research Integration
-Connection to sports science databases
 
-Evidence-based recommendation weighting
+Sports science database references
 
-Longitudinal tracking of prevention efficacy
+Evidence-weighted recommendations
+
+Longitudinal injury prevention tracking
