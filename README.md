@@ -1,11 +1,11 @@
-**🏥📊 Sports Autopsy
+**🏥📊 Sports Autopsy**
 A Local AI–Powered Digital Forensic System for Athletic Injury Analysis
 
 Sports Autopsy is an interactive, multidisciplinary injury forensics platform designed to analyze athletic injuries through a data-driven and prevention-first lens. It combines structured sports science logic with local LLM analysis via Ollama, ensuring privacy, explainability, and actionable insight.
 
 This tool does not merely describe injuries. It investigates why they happened, what could have prevented them, and how to reduce recurrence risk.
 
-🔍 What Problem Does This Solve?
+**🔍 What Problem Does This Solve?**
 
 Sports injuries are rarely caused by a single factor. Traditional analysis often isolates biomechanics or rehab in silos.
 
@@ -19,8 +19,8 @@ Personalized, timeline-based rehabilitation strategies
 
 All while running fully offline.
 
-✨ Key Features
-🎯 Core Capabilities
+**✨ Key Features
+🎯 Core Capabilities**
 
 Interactive Data Collection
 Guided inputs for athlete profile, injury details, training load, recovery, and performance metrics.
@@ -76,8 +76,8 @@ Risk-taking and fatigue decision patterns
 
 Mental recovery considerations
 
-⚙️ Installation
-Prerequisites
+**⚙️ Installation
+Prerequisites**
 
 Python 3.8+
 
@@ -144,7 +144,7 @@ A detailed text report:
 
 injury_report_<athlete_name>_<timestamp>.txt
 
-🧠 System Architecture
+**🧠 System Architecture**
 Core Components
 
 OllamaClient
@@ -278,7 +278,7 @@ Data-driven prevention programs
 
 Reduced reinjury risk
 
-⚠️ Limitations
+**⚠️ Limitations**
 
 Manual data entry only (no sensors yet)
 
@@ -286,7 +286,7 @@ Generalized logic without sport-specific templates
 
 Accuracy depends on user input quality
 
-🔐 Privacy & Security
+**🔐 Privacy & Security**
 
 100% Local Processing
 
@@ -296,9 +296,9 @@ Full Data Ownership
 
 Your data never leaves your machine.
 
-🚀 Future Enhancements
+**🚀 Future Enhancements
 Planned Features
-
+**
 CSV import for athlete metrics
 
 Wearable data integration
