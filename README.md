@@ -81,9 +81,15 @@ Each injury is independently evaluated by:
 - `pip` package manager
 
 ### Step 1: Clone the Repository
-```bash
+
 git clone <repository-url>
 cd sports-autopsy
+
+## ⚙️ Installation
+
+### Prerequisites
+- Python 3.8+
+- `pip` package manager
 
 Step 2: Install Python Dependencies
 pip install pandas numpy scikit-learn requests
