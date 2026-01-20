@@ -74,42 +74,7 @@ Each injury is independently evaluated by:
 
 ---
 
-## ⚙️ Installation
-
-### Prerequisites
-- Python 3.8+
-- `pip` package manager
-
-### Step 1: Clone the Repository
-
-git clone <repository-url>
-cd sports-autopsy
-
-## ⚙️ Installation
-
-### Prerequisites
-- Python 3.8+
-- `pip` package manager
-
-Step 2: Install Python Dependencies
-pip install pandas numpy scikit-learn requests
-
-Step 3: Install Ollama (Optional but Recommended)
-
-Visit: https://ollama.com
-
-Or rely on the built-in detection fallback.
-
-Step 4: Download an Ollama Model
-ollama pull mistral
-# or
-ollama pull llama3.2
-
-▶️ Usage
-Basic Execution
-python injury_autopsy.py
-
-Interactive Workflow
+### Interactive Workflow
 
 The system guides the user through:
 
@@ -128,7 +93,7 @@ Prior injuries and surgeries
 Performance Metrics
 Fatigue trends, pain levels, workload changes
 
-📴 Running Without Ollama
+### 📴 Running Without Ollama
 
 If Ollama is not installed:
 
@@ -138,7 +103,7 @@ Outputs structured but non-AI-generated analysis
 
 For full forensic reasoning, Ollama is recommended.
 
-📄 Output
+### 📄 Output
 Console Output
 
 Live display of all expert analyses
@@ -149,7 +114,7 @@ A detailed text report generated automatically:
 
 injury_report_<athlete_name>_<timestamp>.txt
 
-🧠 System Architecture
+### 🧠 System Architecture
 Core Components
 
 OllamaClient
@@ -184,7 +149,7 @@ Prevention & Rehab Plan
    ↓
 Final Forensic Report
 
-🤖 Supported AI Models
+### 🤖 Supported AI Models
 Recommended
 
 Mistral (Default) – Balanced speed and reasoning
@@ -209,7 +174,7 @@ Model behavior can be adjusted in:
 
 OllamaClient.generate()
 
-🧪 Example Use Case
+### 🧪 Example Use Case
 Scenario: Soccer Player Hamstring Injury
 
 Athlete: Alex Johnson (24, Midfielder)
@@ -230,7 +195,7 @@ Psychological stress and fatigue correlations
 
 A structured 12-week return-to-play plan
 
-🔧 Customization
+### 🔧 Customization
 Modify Expert Prompts
 
 Edit:
@@ -282,7 +247,7 @@ Data-driven prevention programs
 
 Reduced reinjury risk
 
-⚠️ Limitations
+### ⚠️ Limitations
 
 Manual data entry only (no sensors yet)
 
@@ -290,7 +255,7 @@ Generalized logic without sport-specific templates
 
 Accuracy depends on user input quality
 
-🔐 Privacy & Security
+### 🔐 Privacy & Security
 
 100% Local Processing
 
@@ -300,7 +265,7 @@ Full Data Ownership
 
 Your data never leaves your machine.
 
-🚀 Future Enhancements
+### 🚀 Future Enhancements
 Planned Features
 
 CSV import for athlete metrics
